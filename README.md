@@ -37,4 +37,5 @@ Import it into phpMyAdmin before running the project.
 
 ## 👩‍💻 Author
 Sara Rasoli
-AIU - Computer Science
+
+
