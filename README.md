@@ -65,39 +65,32 @@ Main tables:
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/yourusername/aiu-paper-repository.git
+
 2️⃣ Move Project to XAMPP
-
 Move the folder into:
-
 C:\xampp\htdocs\design02_aiu_paper_repository_db\
+
 3️⃣ Import Database
-
 Open phpMyAdmin
-
 Create a new database:
-
 aiu_paper_repository_db
-
 Import database.sql (included in this repository)
 
 4️⃣ Configure Database Connection
-
 Open db_connect.php and update:
 
 $connection = new mysqli("localhost", "root", "", "aiu_paper_repository_db");
 5️⃣ Start XAMPP
 
 Start:
-
 Apache
-
 MySQL
 
 6️⃣ Access the System
 
 Open in browser:
-
 http://localhost/design02_aiu_paper_repository_db/
+
 📂 Project Structure
 design02_aiu_paper_repository_db/
 │── dashboards/                    # Student & Admin dashboards
@@ -111,48 +104,27 @@ design02_aiu_paper_repository_db/
 │── module2_submission.php         # Paper submission
 │── module3_search_download.php    # Search & download module
 │── module4_reports_citations.php  # Reports & citations
+
 🧪 Usage
+
 Students
-
 Register / Login
-
 Submit research papers
-
 Track approval status
 
 Admins
-
 Login to dashboard
-
 Review submissions
-
 Approve or reject papers
-
 Manage student accounts
 
 🔒 Security Features
 
 Session-based authentication
-
 File uploads restricted to PDF format
-
 Relative file paths stored in database
-
 Confirmation prompts for delete actions
-
 Basic input validation
-
-📌 Future Improvements
-
-Search and filter papers by keyword or category
-
-Export reports (PDF / Excel)
-
-Email notifications for approval status
-
-Advanced role-based access control
-
-Improved UI enhancements
 
 👩‍💻 Author
 
