@@ -1,113 +1,161 @@
-📚 AIU Research Paper Repository System
-A web-based academic paper repository built with PHP, MySQL, and XAMPP, designed for Albukhary International University coursework.
-This system allows students to submit research papers, manage categories and supervisors, and track approval status.
-Administrators can review, approve/reject submissions, and manage student accounts.
+# 📚 AIU Research Paper Repository System
 
-🚀 Features
-👩‍🎓 Student Portal
-Secure login and session management
+A web-based academic paper repository built using **PHP, MySQL, and XAMPP** for Albukhary International University coursework.
 
-Submit new papers with:
+This system allows students to submit research papers, manage categories and supervisors, and track approval status.  
+Administrators can review submissions, approve/reject papers, and manage student accounts.
 
-Title, abstract, publication year
+---
 
-Category (choose existing or add new)
+## 🚀 Features
 
-Supervisor (choose existing or add new)
+### 👩‍🎓 Student Portal
+- Secure login with session management
+- Submit new research papers including:
+  - Title
+  - Abstract
+  - Publication Year
+  - Category (select existing or add new)
+  - Supervisor (select existing or add new)
+  - Keywords (comma-separated, linked to papers)
+- Upload PDF files (stored in `/uploads/`)
+- View submitted papers with approval status
+- Edit or delete own submissions
 
-Keywords (comma-separated, linked to papers)
+---
 
-PDF file upload (stored in /uploads/)
+### 🧑‍💼 Admin Dashboard
+- Manage paper approvals (Approve, Reject, Pending)
+- View full paper details and open uploaded PDFs
+- Manage student accounts:
+  - Update account status (Active, Suspended, Inactive)
+  - Delete student accounts (removes associated papers)
+- Generate reports
 
-View submitted papers with approval status
+---
 
-Edit or delete own submissions
+## ⚙️ Technical Highlights
 
-🧑‍💼 Admin Dashboard
-Manage paper approvals (Approve, Reject, Pending)
+### 🗄 Database Schema
 
-View paper details and open PDFs
+Main tables:
+- `student`
+- `research_paper`
+- `category`
+- `supervisor`
+- `keyword`
+- `paper_keyword`
+- `paper_approval`
 
-Manage student accounts:
+### 📂 File Handling
+- Secure PDF upload system
+- Uploaded files stored in `/uploads/`
+- Relative paths stored in database (`uploads/filename.pdf`)
+- No absolute Windows paths stored
 
-Update status (Active, Suspended, Inactive)
+### 🎨 UI/UX
+- Responsive layout with custom CSS
+- Clear action buttons (Edit, Delete, View)
+- Status badges (Approved, Pending, Rejected)
 
-Delete accounts (removes associated papers)
+---
 
-Generate reports
+## 🛠️ Installation Guide
 
-⚙️ Technical Highlights
-Database schema with tables:
-
-student, research_paper, category, supervisor, keyword, paper_keyword, paper_approval
-
-File handling:
-
-Safe PDF upload
-
-Relative paths stored in DB (uploads/filename.pdf)
-
-UI/UX:
-
-Responsive design with custom CSS
-
-Action buttons for edit, delete, view
-
-Status badges (Approved, Pending, Rejected)
-
-🛠️ Installation
-Clone the repository:
-
-bash
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/yourusername/aiu-paper-repository.git
-Move project into XAMPP htdocs:
+2️⃣ Move Project to XAMPP
 
-Code
+Move the folder into:
+
 C:\xampp\htdocs\design02_aiu_paper_repository_db\
-Import the database:
+3️⃣ Import Database
 
 Open phpMyAdmin
 
-Create a database (e.g., aiu_paper_repository_db)
+Create a new database:
 
-Import database.sql (included in repo)
+aiu_paper_repository_db
 
-Configure database connection:
+Import database.sql (included in this repository)
 
-Edit db_connect.php with your MySQL credentials:
+4️⃣ Configure Database Connection
 
-php
+Open db_connect.php and update:
+
 $connection = new mysqli("localhost", "root", "", "aiu_paper_repository_db");
-Start Apache & MySQL in XAMPP.
+5️⃣ Start XAMPP
 
-Access system:
+Start:
 
-Code
+Apache
+
+MySQL
+
+6️⃣ Access the System
+
+Open in browser:
+
 http://localhost/design02_aiu_paper_repository_db/
 📂 Project Structure
-Code
 design02_aiu_paper_repository_db/
-│── dashboards/          # Student & Admin dashboards
-│── actions/             # Edit/Delete paper actions
-│── uploads/             # PDF storage
-│── styles/              # CSS files
-│── images/              # Logos and assets
-│── db_connect.php       # Database connection
-│── index.php            # Landing page
-│── module1_student_access.php  # Student login
-│── module2_submission.php      # Paper submission
-│── ...
+│── dashboards/                    # Student & Admin dashboards
+│── actions/                       # Edit/Delete paper actions
+│── uploads/                       # PDF storage
+│── styles/                        # CSS files
+│── images/                        # Logos and assets
+│── db_connect.php                 # Database connection
+│── index.php                      # Landing page
+│── module1_student_access.php     # Student login
+│── module2_submission.php         # Paper submission
+│── module3_search_download.php    # Search & download module
+│── module4_reports_citations.php  # Reports & citations
 🧪 Usage
-Students: Register/login → Submit papers → Track approval status.
-Admins: Login → Review papers → Approve/Reject → Manage students.
+Students
 
-🔒 Security Notes
+Register / Login
+
+Submit research papers
+
+Track approval status
+
+Admins
+
+Login to dashboard
+
+Review submissions
+
+Approve or reject papers
+
+Manage student accounts
+
+🔒 Security Features
+
 Session-based authentication
-File uploads restricted to PDF
-Relative paths stored in DB (no absolute Windows paths)
+
+File uploads restricted to PDF format
+
+Relative file paths stored in database
+
 Confirmation prompts for delete actions
-Role-based access control
+
+Basic input validation
+
+📌 Future Improvements
+
+Search and filter papers by keyword or category
+
+Export reports (PDF / Excel)
+
+Email notifications for approval status
+
+Advanced role-based access control
+
+Improved UI enhancements
 
 👩‍💻 Author
-Developed by Sara Rasoli  
+
+Sara Rasoli
+Computer Science Student
 Albukhary International University
