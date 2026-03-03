@@ -1,6 +1,6 @@
 # 📚 AIU Research Paper Repository System
 
-A web-based academic paper repository built using **PHP, MySQL, and XAMPP** for Albukhary International University coursework.
+A web-based academic research paper repository built using **PHP, MySQL, and XAMPP** for Albukhary International University coursework.
 
 This system allows students to submit research papers, manage categories and supervisors, and track approval status.  
 Administrators can review submissions, approve/reject papers, and manage student accounts.
