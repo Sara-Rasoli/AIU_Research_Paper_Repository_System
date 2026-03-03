@@ -33,7 +33,7 @@ Import it into phpMyAdmin before running the project.
 2. Move project folder to htdocs
 3. Import SQL file into phpMyAdmin
 4. Open:
-   http://localhost/project-folder-name
+   http://localhost/design02_aiu_paper_repository_db
 
 ## 👩‍💻 Author
 Sara Rasoli
